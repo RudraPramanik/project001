@@ -1,0 +1,64 @@
+query getArticle($id: ID) {
+  article(id: $id) {
+    data {
+      id
+      attributes {
+        title
+        description
+        slug
+        content
+        views
+        publishedAt
+        createdAt
+        updatedAt
+        seo {
+          ...SeoFields
+        }
+        category {
+          data {
+            id
+            attributes {
+              name
+              slug
+            }
+          }
+        }
+        author {
+          data {
+            id
+            attributes {
+              name
+              email
+              linkedin
+              twitter
+              about
+              slug
+              picture {
+                data {
+                  id
+                  attributes {
+                    height
+                    width
+                    name
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+        image {
+          data {
+            id
+            attributes {
+              height
+              width
+              name
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}

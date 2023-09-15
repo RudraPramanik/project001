@@ -1,0 +1,11 @@
+query GetBlogPage {
+  blogPage {
+    data {
+      attributes {
+        hero_title
+       popular_posts_text
+       new_posts_text
+      }
+    }
+  }
+}

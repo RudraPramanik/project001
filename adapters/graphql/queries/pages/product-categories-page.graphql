@@ -1,0 +1,13 @@
+query GetProductCategoryPage {
+  productCategory {
+    data {
+      attributes {
+        createdAt
+        updatedAt
+        seo {
+          ...SeoFields
+        }
+      }
+    }
+  }
+}

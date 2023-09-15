@@ -1,0 +1,9 @@
+query GetSingleBlogPage {
+  singleBlogPage {
+    data {   
+      attributes {
+        author_card_button_text
+                }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+query GetErrorPage {
+  errorPage {
+    data {
+      attributes {
+        title
+        description
+        button_text
+        createdAt
+        updatedAt
+        publishedAt
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+fragment SeoFields on ComponentSharedSeo {
+  id
+  metaTitle
+  metaDescription
+  keywords
+  metaRobots
+  structuredData
+  metaViewport
+  canonicalURL
+  metaSocial {
+    id
+    socialNetwork
+    title
+    description
+    image {
+      data {
+        attributes {
+          url
+          width
+          height
+        }
+      }
+    }
+  }
+  metaImage {
+    data {
+      attributes {
+        url
+        width
+        height
+      }
+    }
+  }
+}

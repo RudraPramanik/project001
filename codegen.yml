@@ -1,0 +1,15 @@
+overwrite: true
+schema:
+  - "http://localhost:1337/graphql"
+documents:
+  - "adapters/graphql/**/*.graphql"
+generates:
+  adapters/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-query"
+    config:
+      addInfiniteQuery: true
+      fetcher:
+        func: "../gql-client#rqClient"

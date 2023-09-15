@@ -1,0 +1,77 @@
+query getBuyingGuides(
+  $filters: BuyingGuideFiltersInput
+  $pagination: PaginationArg = {}
+  $sort: [String] = []
+  $publicationState: PublicationState = LIVE
+) {
+  buyingGuides(
+    filters: $filters
+    pagination: $pagination
+    sort: $sort
+    publicationState: $publicationState
+  ) {
+    meta {
+      pagination {
+        total
+        page
+        pageSize
+        pageCount
+      }
+    }
+    data {
+      id
+      attributes {
+        title
+        name
+        description
+        product_group_slug
+        publishedAt
+        createdAt
+        updatedAt
+        buying_guide_components {
+          ... on ComponentSharedBuyingGuide {
+            id
+            title
+            faq
+            cover {
+              data {
+                id
+                attributes {
+                  height
+                  width
+                  name
+                  url
+                }
+              }
+            }
+            content
+          }
+        }
+        writer {
+          data {
+            id
+            attributes {
+              name
+              email
+              linkedin
+              twitter
+              about
+              slug
+              picture {
+                data {
+                  id
+                  attributes {
+                    height
+                    width
+                    name
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

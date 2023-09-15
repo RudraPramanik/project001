@@ -1,0 +1,15 @@
+
+query GetPrivacyPolicyPage {
+  privacyPolicy {
+    data {
+      attributes {
+        title
+        content
+        createdAt
+        updatedAt
+        publishedAt
+      
+      }
+    }
+  }
+}

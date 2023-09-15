@@ -1,0 +1,26 @@
+query GetHeaderPage {
+  header {
+    data {
+      attributes {
+        blog_title
+        over_title
+        contact_title
+        categories_title
+        mobile_nav_title
+        createdAt
+        updatedAt
+        publishedAt
+        Nav_Links {
+          name
+          slug
+          original_name
+        }
+        Categories {
+          slug
+          name
+          original_name
+        }
+      }
+    }
+  }
+}

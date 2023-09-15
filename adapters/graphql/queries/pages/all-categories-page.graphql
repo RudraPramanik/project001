@@ -1,0 +1,14 @@
+query GetAllCategoriesPage {
+  allCategoriesPage {
+    data {
+      attributes {
+        createdAt
+        updatedAt
+        publishedAt
+        seo {
+          ...SeoFields
+        }
+      }
+    }
+  }
+}

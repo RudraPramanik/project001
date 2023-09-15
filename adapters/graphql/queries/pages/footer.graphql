@@ -1,0 +1,30 @@
+query GetFooterPage {
+  footer {
+    data {
+      attributes {
+        categories_title
+        pages_title
+        contact_title
+        email_title
+        email
+        adress_title
+        adress
+        footer_description
+        createdAt
+        updatedAt
+        publishedAt
+        Categories {
+          slug
+          name
+          original_name
+        }
+        Pages_Links {
+          slug
+          name
+          original_name
+        }
+        copyright_text
+      }
+    }
+  }
+}

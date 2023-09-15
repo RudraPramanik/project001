@@ -1,0 +1,48 @@
+query getOneBuyingGuide($id: ID) {
+  buyingGuide(id: $id) {
+    data {
+      id
+      attributes {
+        title
+        name
+        description
+        product_group_slug
+        publishedAt
+        createdAt
+        updatedAt
+        buying_guide_components {
+          ... on ComponentSharedBuyingGuide {
+            id
+            title
+            faq
+            content
+          }
+        }
+        writer {
+          data {
+            id
+            attributes {
+              name
+              email
+              linkedin
+              twitter
+              about
+              slug
+              picture {
+                data {
+                  id
+                  attributes {
+                    height
+                    width
+                    name
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

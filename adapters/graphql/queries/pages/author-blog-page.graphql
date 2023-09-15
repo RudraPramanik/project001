@@ -1,0 +1,14 @@
+query GetAuthorBlogPage {
+  authorBlogPage {
+    data {
+      attributes {
+        seo {
+          ...SeoFields
+        }
+        createdAt
+        updatedAt
+        publishedAt
+      }
+    }
+  }
+}

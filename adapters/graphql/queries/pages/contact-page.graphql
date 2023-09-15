@@ -1,0 +1,15 @@
+query GetContactPage {
+  contactPage {
+    data {
+      attributes {
+     hero_title
+     send_button_text
+     content_description
+     content_title
+     form_message_placeholder
+     form_email_placeholder
+     form_name_placeholder
+      }
+    }
+  }
+}

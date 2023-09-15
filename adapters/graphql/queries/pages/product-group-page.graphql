@@ -1,0 +1,32 @@
+query GetProductGroupPage {
+  productGroupPage {
+    data {
+      attributes {
+            hero_title
+            hero_description
+            product_listing_section_company_title
+            product_listing_section_offers_button_text
+            nav_menu {
+              name
+              slug
+              original_name
+            }
+            related_buying_guides_title
+            item_description
+            similar_buying_guides_title
+            similar_items_section_title
+            item_title
+            item_offers_button_text
+            item_stores_section_title
+            product_group_footer_title
+            product_group_footer_description
+            buying_guides_title
+buying_guides_section_one_title
+buying_guides_section_two_title
+buying_guides_section_one_description
+buying_guides_section_two_description
+
+      }
+    }
+  }
+}

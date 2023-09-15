@@ -1,0 +1,59 @@
+query GetSiteSettings {
+  setting {
+    data {
+      id
+      attributes {
+        published_date_text
+        email_title
+        adress_title
+        social_network_title
+        email
+        adress
+        social_media_links(pagination: { limit: 20 }) {
+          id
+          social_media
+          link
+        }
+        Categories_Data {
+          name
+          slug
+          original_name 
+        }
+        global_accordions(pagination: { limit: 20 }) {
+          name
+          slug
+          original_name
+        }
+        global_links(pagination: { limit: 20 }) {
+          name
+          slug
+          original_name
+        }
+        logo {
+          data {
+            id
+            attributes {
+              name
+              width
+              height
+              url
+              previewUrl
+            }
+          }
+        }
+        favicon {
+          data {
+            id
+            attributes {
+              name
+              width
+              height
+              url
+              previewUrl
+            }
+          }
+        }
+      }
+    }
+  }
+}

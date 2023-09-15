@@ -1,0 +1,39 @@
+image: alpine:latest
+
+deploy_production:
+  stage: deploy
+  before_script:
+    - "command -v ssh-agent >/dev/null || ( apk add --update openssh )"
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY_PROD" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan $VM_IPADDRESS_PROD >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - ssh $SSH_USER_PROD@$VM_IPADDRESS_PROD "cd tbeste && git pull origin main && yarn docker:build && yarn docker"
+    - echo "Done"
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+
+deploy_staging:
+  stage: deploy
+  before_script:
+    - "command -v ssh-agent >/dev/null || ( apk add --update openssh )"
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY_PROD" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan $VM_IPADDRESS_STAGING >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - ssh $SSH_USER_PROD@$VM_IPADDRESS_STAGING "cd tbeste && git pull origin staging && yarn docker:build && yarn docker"
+    - echo "Done"
+  artifacts:
+    paths:
+      - public
+  only:
+    - staging

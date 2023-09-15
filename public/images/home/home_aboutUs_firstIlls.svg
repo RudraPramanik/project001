@@ -1,0 +1,10 @@
+<svg width="799" height="374" viewBox="0 0 799 374" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M38 39C38 19.67 53.67 4 73 4H723.916C741.647 4 756.577 17.2598 758.671 34.867L794.346 334.867C796.822 355.689 780.56 374 759.591 374H73C53.67 374 38 358.33 38 339V39Z" fill="#1B1B1F"/>
+<path d="M34 60C34 40.67 49.67 25 69 25H720C739.33 25 755 40.67 755 60V317C755 336.33 739.33 352 720 352H69C49.67 352 34 336.33 34 317V60Z" fill="#1B1B1F"/>
+<path d="M0 315.997C5.17365 348.565 35.976 352.078 40 352.078H74.5C58.5 333.882 0 295.154 0 315.997Z" fill="#1B1B1F"/>
+<rect x="2" y="2" width="744" height="341" rx="33" fill="#FFFFE6" stroke="#1B1B1F" stroke-width="4"/>
+<ellipse cx="710.976" cy="36.8396" rx="17.6928" ry="17.8396" fill="white"/>
+<circle cx="709.304" cy="36.304" r="16.304" fill="#1B1B1F" stroke="white" stroke-width="2"/>
+<rect width="1.95018" height="19.5018" transform="matrix(0.70418 0.710021 -0.70418 0.710021 715.396 29.0703)" fill="white"/>
+<rect x="-2.11254" width="4.95018" height="22.5018" transform="matrix(0.70418 -0.710021 0.70418 0.710021 701.178 28.5469)" fill="white" stroke="#1B1B1F" stroke-width="3"/>
+</svg>

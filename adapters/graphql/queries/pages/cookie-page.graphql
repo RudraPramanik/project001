@@ -1,0 +1,13 @@
+query GetCookiePolicyPage {
+  cookiePolicy {
+    data {
+      attributes {
+        title
+        content
+        createdAt
+        updatedAt
+        publishedAt
+      }
+    }
+  }
+}

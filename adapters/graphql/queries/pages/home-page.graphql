@@ -1,0 +1,32 @@
+query GetHomePage {
+  homePage {
+    data {
+      attributes {
+        about_tbeste_title
+        about_tbeste_description_one
+        about_tbeste_description_two
+        about_tbeste_description_three
+        about_tbeste_button_text
+        categories_section_title
+        categories_section_description
+        blog_section_title
+        blog_section_description
+        blog_section_button_text
+        all_categories_section_title
+        all_categories_section_description
+        blog_section_popular_posts
+        blog_section_new_posts
+
+        subcat {
+          cat_name
+          slug
+          subsubcat {
+            name
+            slug
+            original_name
+          }
+        }
+      }
+    }
+  }
+}

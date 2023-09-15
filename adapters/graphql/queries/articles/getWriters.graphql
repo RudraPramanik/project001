@@ -1,0 +1,41 @@
+query getWriters(
+  $filters: WriterFiltersInput
+  $pagination: PaginationArg = {}
+  $sort: [String] = []
+) {
+  writers(filters: $filters, pagination: $pagination, sort: $sort) {
+    meta {
+      pagination {
+        total
+        page
+        pageSize
+        pageCount
+      }
+    }
+    data {
+      id
+      attributes {
+        name
+        slug
+        email
+        about
+        linkedin
+        twitter
+        featured
+        createdAt
+        updatedAt
+        picture {
+          data {
+            id
+            attributes {
+              name
+              url
+              width
+              height
+            }
+          }
+        }
+      }
+    }
+  }
+}

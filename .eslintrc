@@ -1,0 +1,36 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "next/core-web-vitals",
+    "prettier",
+    "next"
+  ],
+  "rules": {
+    "import/no-unused-modules": [1],
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-img-element": "off",
+    "no-unsafe-optional-chaining": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/prefer-optional-chain": "error",
+    "prettier/prettier": ["error"],
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

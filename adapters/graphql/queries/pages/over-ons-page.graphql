@@ -1,0 +1,17 @@
+query GetOverOnsPage {
+  overOnsPage {
+    data {
+      attributes {
+        Hero_title
+        first_section_title
+        first_section_description
+        second_section_title
+        second_section_description
+        bottom_section_title
+        hero_description
+        bottom_section_title
+
+      }
+    }
+  }
+}

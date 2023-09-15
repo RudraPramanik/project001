@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  tbeste-front:
+    container_name: tbeste-front
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${PORT}:${PORT}"
+    env_file:
+      - .env
